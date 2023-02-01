@@ -1,16 +1,14 @@
 package Task3;
 
-import com.sun.java.swing.plaf.windows.WindowsTreeUI;
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
 public class ClassReflectionTest {
-    private String name="";
-    int num;
     public Integer sum;
+    int num;
+    private String name = "";
 
     public ClassReflectionTest(String name, int num) {
         this.name = name;
@@ -33,15 +31,16 @@ public class ClassReflectionTest {
         this.num = num;
     }
 
-    public  Integer getSum() {
+    public Integer getSum() {
         return sum;
     }
 
-    public  void setSum(Integer sum) {
+    public void setSum(Integer sum) {
 //        ClassReflectionTest.sum = sum;
     }
 }
-class Main{
+
+class Main {
     public static void main(String[] args) {
 
         String s = (char) 27 + "[31m";
@@ -54,23 +53,23 @@ class Main{
         Constructor[] constructorArr = cl.getConstructors();
         int classMod = cl.getModifiers();
 
-        System.out.println(s+ "Fields: ");
+        System.out.println(s + "Fields: ");
         for (Field fld : fieldArr) {
-            System.out.println(s2+ "Field name: "+ s1+fld.getName()+s2+  "  Field type: "
-                    +s1+fld.getType() +s2+"   modifier: " + s1+ fld.getModifiers());
+            System.out.println(s2 + "Field name: " + s1 + fld.getName() + s2 + "  Field type: "
+                    + s1 + fld.getType() + s2 + "   modifier: " + s1 + fld.getModifiers());
 
         }
-        System.out.println(s+ "methods: ");
+        System.out.println(s + "methods: ");
         for (Method method : methodArr) {
-            System.out.println(s2+"\tMethod name: "+ s1+ method.getName() + s2 + " \tmethod return: " + s1 +
-                    method.getReturnType() + s2 + " \tparams: " + s1 + Arrays.asList(method.getParameters())+ s2 +
-                    " \tmodifier: " +s1 + method.getModifiers());
+            System.out.println(s2 + "\tMethod name: " + s1 + method.getName() + s2 + " \tmethod return: " + s1 +
+                    method.getReturnType() + s2 + " \tparams: " + s1 + Arrays.asList(method.getParameters()) + s2 +
+                    " \tmodifier: " + s1 + method.getModifiers());
         }
-        System.out.println(s+ "constructors: ");
+        System.out.println(s + "constructors: ");
         for (Constructor constructor : constructorArr) {
 
-            System.out.println(s2+"\tConstructor name: "+ s1+ constructor.getName() + s2 + " \tparams: " + s1 + Arrays.asList(constructor.getParameters())+ s2 +
-                    " \tmodifier: " +s1 + constructor.getModifiers());
+            System.out.println(s2 + "\tConstructor name: " + s1 + constructor.getName() + s2 + " \tparams: " + s1 + Arrays.asList(constructor.getParameters()) + s2 +
+                    " \tmodifier: " + s1 + constructor.getModifiers());
         }
 
     }

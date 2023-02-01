@@ -1,10 +1,11 @@
 package Task4;
 
 public class Animal {
-    private int x1;
-            int x2 = 4;
     protected int x3 = 9;
-    public Animal(){
+    int x2 = 4;
+    private int x1;
+
+    public Animal() {
 
     }
 

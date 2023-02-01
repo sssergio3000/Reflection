@@ -29,18 +29,18 @@ public class ClassReflectionInfo {
         }
 
         System.out.println(s2 + "Short name: " + s1 + cl.getName().substring(cl.getName().lastIndexOf('.') + 1));
-        System.out.println(s2 + "Full name: " + s1 + cl.getName() );
+        System.out.println(s2 + "Full name: " + s1 + cl.getName());
 
         Field[] fieldArr = cl.getDeclaredFields();
-        System.out.println(s2+ "Class fields: "+s1 + Arrays.asList(fieldArr));
+        System.out.println(s2 + "Class fields: " + s1 + Arrays.asList(fieldArr));
 
         Method[] methArr = cl.getDeclaredMethods();
-        System.out.println(s2+ "Class methods: "+s1 + Arrays.asList(methArr));
+        System.out.println(s2 + "Class methods: " + s1 + Arrays.asList(methArr));
 
         Annotation[] annoArr = cl.getDeclaredAnnotations();
-        System.out.println(s2+ "Class annotations: "+s1 + Arrays.asList(annoArr));
+        System.out.println(s2 + "Class annotations: " + s1 + Arrays.asList(annoArr));
 
         Constructor[] constArr = cl.getConstructors();
-        System.out.println(s2+ "Class constructors: "+s1 + Arrays.asList(constArr));
+        System.out.println(s2 + "Class constructors: " + s1 + Arrays.asList(constArr));
     }
 }

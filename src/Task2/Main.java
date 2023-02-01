@@ -1,9 +1,5 @@
 package Task2;
 
-import java.lang.annotation.Inherited;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-
 /**
  * @author Sergey Khaykov
  * @since 2023/1/29
@@ -45,7 +41,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-
 
 
         String s = (char) 27 + "[31m";
